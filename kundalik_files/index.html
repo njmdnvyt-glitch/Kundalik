@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kundalik — мой дневник</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <p class="eyebrow">МОЙ УЧЕБНЫЙ ПРОЕКТ</p>
+      <h1>Kundalik</h1>
+      <p class="subtitle">Небольшой дневник для ежедневных заметок.</p>
+    </header>
+
+    <section class="card" aria-labelledby="form-title">
+      <h2 id="form-title">Новая запись</h2>
+      <form id="note-form">
+        <label for="note-title">Заголовок</label>
+        <input id="note-title" type="text" maxlength="60" placeholder="Например, Учёба" required>
+        <label for="note-text">Текст заметки</label>
+        <textarea id="note-text" rows="4" maxlength="500" placeholder="Что сегодня произошло?" required></textarea>
+        <button type="submit">Добавить запись</button>
+      </form>
+    </section>
+
+    <section class="entries" aria-labelledby="entries-title">
+      <div class="section-heading">
+        <h2 id="entries-title">Мои записи</h2>
+        <button id="clear-button" class="clear-button" type="button">Очистить записи</button>
+      </div>
+      <p id="empty-message" class="empty-message">Пока записей нет. Добавь свою первую заметку!</p>
+      <div id="note-list" class="note-list" aria-live="polite"></div>
+    </section>
+    <footer>Учебный проект · Данные сохраняются в этом браузере</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
